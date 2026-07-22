@@ -1,66 +1,39 @@
-# Luna Shuqair — Portfolio
+# Luna Shuqair | Front-End React Developer Portfolio
 
-An Awwwards-style, single-scroll interactive portfolio for a security-cleared
-FSO / front-end developer. Built with React + Vite + Tailwind, GSAP
-ScrollTrigger, Lenis smooth scroll, and a React Three Fiber hero scene.
+Welcome to my personal portfolio website. This project showcases my skills, projects, and experience building modern, responsive, and interactive web applications.
 
-## Getting started
+## 🚀 About
 
-```bash
-npm install
-npm run dev
-```
+This portfolio was built with React and Vite to demonstrate my ability to create engaging user experiences using reusable components, modern styling, and animation techniques.
 
-Then open the local URL Vite prints (usually `http://localhost:5173`).
+## 🛠️ Built With
 
-To build for production:
+- React
+- Vite
+- JavaScript (ES6+)
+- Tailwind CSS
+- CSS3
+- GSAP
+- Three.js / React Three Fiber
+- Git & GitHub
 
-```bash
-npm run build
-npm run preview
-```
+## ✨ Features
 
-## Design concept
+- Responsive design across devices
+- Interactive animations and transitions
+- Modern UI/UX design
+- Reusable React components
+- Project showcase
+- Contact section
 
-The site treats every section like a clearance/access-control terminal,
-rendered with editorial polish rather than a literal "hacker" look:
+## 🌐 Live Demo
 
-- **Loader** (`Loader.jsx`) — an "ACCESS GRANTED" verification sequence
-  instead of a generic progress bar.
-- **Hero** (`Hero.jsx` + `AccessGridScene.jsx`) — a React Three Fiber scene
-  of a wireframe "core" orbited by a distributed point field, standing in
-  for an access-control network.
-- **Case Files** (`CaseFiles.jsx` + `CaseFile.jsx`) — work experience
-  presented as expandable dossier entries with real classification-style
-  metadata (case ID, status, period).
-- **Clearance & Skills** (`Clearance.jsx`) — core competencies, stack,
-  certifications, and education as "permissions."
-- **Contact** (`Contact.jsx`) — direct, large-type call to action.
-- **Custom cursor** (`CustomCursor.jsx`) — a targeting reticle that snaps
-  and labels itself over interactive elements (desktop only; disabled on
-  touch devices).
+(Add your Vercel link here)
 
-All copy and facts are sourced verbatim from the original resume in
-`src/data/content.js` — edit that file to update content without touching
-any component markup.
+## 👩‍💻 Author
 
-## Motion architecture
+**Luna Shuqair**
 
-- `src/hooks/useLenis.js` initializes Lenis and syncs it to GSAP's ticker
-  and `ScrollTrigger.update`, so scroll-driven animations stay in lockstep
-  with the smoothed scroll position. It's disabled automatically when the
-  OS-level "reduce motion" preference is on.
-- Each section registers its own `ScrollTrigger` reveal animations inside a
-  `gsap.context()` scoped to that section, and reverts them on unmount.
-- The loader-to-hero transition (slide up + reveal) doubles as the site's
-  cinematic entrance transition, since this is a single continuously
-  scrolling page rather than a multi-route app.
+Front-End React Developer
 
-## Notes
-
-- Tailwind tokens (colors, fonts) live in `tailwind.config.js` — this is
-  the single source of truth for the palette and type scale.
-- `prefers-reduced-motion` is respected globally (see `src/styles/index.css`
-  and `useLenis.js`).
-- The custom cursor is hidden automatically on touch/coarse-pointer
-  devices in favor of the native cursor.
+GitHub: https://github.com/LShuqair
