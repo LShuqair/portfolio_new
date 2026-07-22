@@ -28,7 +28,7 @@ This portfolio was built with React and Vite to demonstrate my ability to create
 
 ## 🌐 Live Demo
 
-(Add your Vercel link here)
+https://luna-shuqair-portfolio.vercel.app/
 
 ## 👩‍💻 Author
 
