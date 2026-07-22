@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --graphite: #0a0b0e;
+  --surface: #15171b;
+  --surface-2: #1d2024;
+  --paper: #edeae1;
+  --gold: #c9a24b;
+  --signal: #5b8ca8;
+  --muted: #7a8088;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--graphite);
+  color: var(--paper);
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  cursor: none;
+}
+
+@media (max-width: 768px), (hover: none) {
+  body {
+    cursor: auto;
+  }
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--graphite);
+}
+
+/* Hairline grid texture used as a subtle background layer */
+.grid-texture {
+  background-image: linear-gradient(
+      to right,
+      rgba(237, 234, 225, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(237, 234, 225, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgba(237, 234, 225, 0.35);
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--graphite);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+}
